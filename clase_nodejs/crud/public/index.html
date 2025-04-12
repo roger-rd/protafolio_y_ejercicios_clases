@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema CRUD</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema CRUD de Usuarios</h1>
+
+        <!-- Formulario -->
+        <form id="usuarioForm">
+            <input type="hidden" id="id" />
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required />
+
+            <label for="run">RUN:</label>
+            <input type="text" id="run" required pattern="\d{7,8}-[\dkK]" title="Formato: 12345678-9 o 12345678-k" />
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" required min="0" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+
+            <button type="submit">Guardar</button>
+        </form>
+
+        <!-- Tabla de usuarios -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>RUN</th>
+                    <th>Edad</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="usuariosTable"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
