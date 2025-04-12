@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/styles/styles.css">
+    <title>pregunta 2</title>
+</head>
+
+<body>
+    <section id="form">
+        <h1>Formulario Datos Personales</h1>
+        <form>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" placeholder="Ingrese su nombre" type="text" maxlength="30" required>
+            </div>
+            <div>
+                <label for="apellido">Apellido:</label>
+                <input id="apellido" placeholder="Ingrese su apellido" type="text" maxlength="30" required>
+            </div>
+            <div>
+                <label for="rut">RUT:</label>
+                <input 
+                    id="rut" 
+                    type="text" 
+                    placeholder="Ingrese su RUT" 
+                    maxlength="10" 
+                    required
+                    oninput="verificarRut()"
+                    pattern="[0-9]{7,8}[\-]?[0-9Kk]{1}"
+                    >
+                <small id="mensajeRut" class="ayuda">(Ej: 12345678-9)</small>
+            </div>
+            <div>
+                <label for="edad">Edad:</label>
+                <input id="edad" type="number" placeholder="Ingrese su edad" min="1" max="99" required>
+            </div>
+            <button id="btn-guardar" type="button">Guardar</button>
+        </form>
+    </section>
+    <section id="cajadatos"></section>
+
+
+    <script src="./js/validarRut.js"></script>
+    <script src="./js/guardarUsuarios.js"></script>
+</body>
+
+</html>

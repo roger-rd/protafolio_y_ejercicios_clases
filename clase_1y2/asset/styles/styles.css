@@ -1,0 +1,57 @@
+body {
+    background-color: rgb(224, 225, 227);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#form {
+    width: 50%;
+    border: solid 2px rgb(170, 166, 166);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+#column1,
+#column2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+}
+
+.ayuda{
+    color: rgba(255, 0, 0, 0.363);
+    font-size: 12px;
+    margin: 1px;
+    margin-left: 40px;
+}
+
+.ayudaFono{
+    color: rgba(255, 0, 0, 0.363);
+    font-size: 12px;
+    margin: 1px;
+    margin-left: 80px;
+}
+
+.inputEdad{
+    width: 50px;
+}
+
+#fono {
+    width: 170px;
+}

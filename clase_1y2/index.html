@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/styles/styles.css">
+    <title>primer app</title>
+</head>
+<body>
+    <section id="form">
+        <h1>Formulario Datos Personales</h1>
+        <form >
+            <article id="column1">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input 
+                        id="nombre" 
+                        placeholder="Ingrese Nombre" 
+                        type="text"
+                        maxlength="30"
+                        required
+                    >
+                </div>
+                <div>
+                    <label for="rut">Rut:</label>
+                    <input 
+                        id="rut" 
+                        type="text"  
+                        placeholder="Ingrese Rut"
+                        maxlength="10"
+                        required
+                    >
+                    <h5 class="ayuda">(ej: 11111111-1)</h5>
+                </div>
+                <div>
+                    <label for="edad">Edad:</label>
+                    <input 
+                        id="edad" 
+                        class="inputEdad"
+                        type="number" 
+                        max="2"
+                        min="1"
+                        required
+                        >
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input 
+                        id="email" 
+                        type="email" 
+                        placeholder="Ingrese Email"
+                        maxlength="30"
+                        required
+                        >
+                </div>
+            </article>
+            <article id="column2">
+                
+                <div>
+                    <label for="fono">Telefono:</label>
+                    <input 
+                        id="fono" 
+                        type="number" 
+                        placeholder="Ingrese Número Telefono"
+                        maxlength="9"
+                        min="100000000"
+                        max="999999999"
+                        required
+                        >
+                    <h5 class="ayudaFono">(ej: 912345678)</h5>
+
+                </div>
+                <div>
+                    <label for="direccion">Dirección:</label>
+                    <input 
+                        id="direccion" 
+                        type="text" 
+                        placeholder="Ingrese Dirección"
+                        maxlength="50"
+                        required
+                        >
+                </div>
+                <div>
+                    <label for="ciudad">Ciudad:</label>
+                    <input 
+                        id="ciudad" 
+                        type="text" 
+                        placeholder="Ingrese Ciudad"
+                        maxlength="20"
+                        required
+                        >
+                </div>
+            </article>
+        </form>
+        <button id="btn-guardar" type="button">guardar</button>
+    </section>
+</body>
+</html>
