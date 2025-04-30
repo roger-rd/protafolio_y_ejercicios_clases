@@ -1,78 +1,88 @@
+/* Estilos generales para el cuerpo de la página */
 body {
-    background-color: #e0e1e3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    padding: 40px 20px;
+    background-color: #e0e1e3; /* Color de fondo gris claro */
+    display: flex; /* Usa flexbox para organizar el contenido */
+    flex-direction: column; /* Organiza los elementos en columna (de arriba hacia abajo) */
+    align-items: center; /* Centra el contenido horizontalmente */
+    height: auto; /* Altura automática (se adapta al contenido) */
+    margin: 0; /* Elimina el margen por defecto del navegador */
+    font-family: Arial, sans-serif; /* Fuente usada en todo el sitio */
+    padding: 40px 20px; /* Espacio alrededor del contenido (arriba/abajo y a los lados) */
 }
 
+/* Estilo del formulario */
 #form {
-    background-color: white;
-    padding: 30px 40px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    margin-bottom: 40px;
+    background-color: white; /* Fondo blanco para diferenciarlo del fondo de la página */
+    padding: 30px 40px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 500px; /* Ancho máximo para mantenerlo compacto */
+    margin-bottom: 40px; /* Espacio inferior respecto al contenido que sigue */
 }
 
+/* Título del formulario */
 h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
+    text-align: center; /* Centra el texto */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    color: #333; /* Gris oscuro */
 }
 
+/* Estilo general del formulario */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: flex; /* Flexbox para organizar los campos */
+    flex-direction: column; /* Orden vertical */
+    gap: 20px; /* Espacio entre los elementos */
 }
 
+/* Estilo para los campos de entrada */
 input {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #bbb;
-    font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 10px; /* Espaciado interno */
+    border-radius: 6px; /* Bordes redondeados */
+    border: 1px solid #bbb; /* Borde gris claro */
+    font-size: 14px; /* Tamaño del texto */
+    width: 100%; /* Ancho completo del contenedor */
+    box-sizing: border-box; /* Incluye padding y borde dentro del ancho */
 }
 
+/* Estilo para las etiquetas */
 label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #444;
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+    font-weight: bold; /* Texto en negrita */
+    color: #444; /* Gris medio */
 }
 
+/* Estilo para el mensaje de ayuda bajo el RUT */
 .ayuda {
-    font-size: 12px;
-    color: #888;
-    margin-top: 4px;
-    display: block;
+    font-size: 12px; /* Letra más pequeña */
+    color: #888; /* Gris claro */
+    margin-top: 4px; /* Espacio arriba del mensaje */
+    display: block; /* Ocupa línea completa debajo del input */
 }
 
+/* Estilo para el botón "Guardar" */
 #btn-guardar {
-    background-color: #0077cc;
-    color: white;
-    padding: 12px;
-    font-size: 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #0077cc; /* Azul fuerte */
+    color: white; /* Texto blanco */
+    padding: 12px; /* Espaciado interno */
+    font-size: 15px; /* Tamaño del texto */
+    border: none; /* Sin borde */
+    border-radius: 6px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
 }
 
+/* Estilo del botón al pasar el mouse encima */
 #btn-guardar:hover {
-    background-color: #005fa3;
+    background-color: #005fa3; /* Azul más oscuro */
 }
 
+/* Botón para editar datos */
 .btnEdit {
-    background-color: #28a745;
+    background-color: #28a745; /* Verde */
     color: white;
-    padding: 6px 10px;
+    padding: 6px 10px; /* Espaciado interior */
     font-size: 13px;
     border: none;
     border-radius: 6px;
@@ -81,11 +91,12 @@ label {
 }
 
 .btnEdit:hover {
-    background-color: #218838;
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
 }
 
+/* Botón para eliminar datos */
 .btnDelete {
-    background-color: #dc3545;
+    background-color: #dc3545; /* Rojo */
     color: white;
     padding: 6px 10px;
     font-size: 13px;
@@ -96,13 +107,14 @@ label {
 }
 
 .btnDelete:hover {
-    background-color: #c82333;
+    background-color: #c82333; /* Rojo más oscuro */
 }
 
+/* Contenedor donde se muestran los datos guardados */
 #cajadatos {
     background-color: white;
     width: 100%;
-    max-width: 700px;
+    max-width: 700px; /* Más ancho que el formulario para que entre la tabla */
     border-radius: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -110,22 +122,26 @@ label {
     margin-bottom: 40px;
 }
 
+/* Estilo de la tabla que aparece dentro de cajadatos */
 #cajadatos table {
-    width: 100%;
-    border-collapse: collapse;
+    width: 100%; /* Ocupa todo el ancho */
+    border-collapse: collapse; /* Elimina espacios entre celdas */
     margin-top: 20px;
 }
 
+/* Estilo para las celdas de la tabla */
 #cajadatos th, #cajadatos td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; /* Línea divisoria gris claro */
 }
 
+/* Fila del encabezado de la tabla */
 #cajadatos th {
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* Gris muy claro */
 }
 
+/* Estilo al pasar el mouse sobre una fila */
 #cajadatos tr:hover {
-    background-color: #f1f1f1;
+    background-color: #f1f1f1; /* Color de fondo más claro al hacer hover */
 }
