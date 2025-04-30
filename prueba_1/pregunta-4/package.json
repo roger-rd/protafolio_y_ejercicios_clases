@@ -1,17 +1,17 @@
 {
-  "name": "pregunta-4",
-  "version": "1.0.0",
-  "description": "pregunta 4 - Prueba 1",
-  "main": "server.js",
+  "name": "pregunta-4",              // 🔸 Nombre del proyecto (puede ser cualquier nombre)
+  "version": "1.0.0",                // 🔸 Versión actual del proyecto (formato estándar mayor.menor.parche)
+  "description": "pregunta 4 - Prueba 1", // 🔸 Descripción del proyecto (opcional pero útil)
+  "main": "server.js",               // 🔸 Archivo principal que se ejecuta (el backend)
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1", // 🔸 Script de prueba por defecto (aún no se usa)
+    "start": "node server.js"       // 🔸 Script para iniciar el servidor usando el comando `npm start`
   },
-  "author": "",
-  "license": "ISC",
+  "author": "",                      // 🔸 Nombre del autor (puedes escribir el tuyo aquí)
+  "license": "ISC",                  // 🔸 Tipo de licencia (ISC es abierta, puedes dejarlo así)
   "dependencies": {
-    "express": "^5.1.0",
-    "js": "^0.1.0",
-    "pg": "^8.11.3"
+    "express": "^5.1.0",             // 🔹 Framework para crear el servidor web
+    "js": "^0.1.0",                  // 🔹 (No es necesario, probablemente fue agregado por error)
+    "pg": "^8.11.3"                  // 🔹 Librería para conectarse a bases de datos PostgreSQL
   }
 }
