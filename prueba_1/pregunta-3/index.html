@@ -1,27 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Extendido</title>
-    <link rel="stylesheet" href="./asset/styles.css">
-</head>
-<body>
-    <main class="container">
-        <h1>¡Hola Mundo!</h1>
-        <p id="text">Este es un párrafo de ejemplo.</p>
-        <ul id="list">
-            <li>Elemento 1</li>
-            <li>Elemento 2</li>
-            <li>Elemento 3</li>
-        </ul>
-        <button id="colorButton" aria-label="Cambiar color de fondo">Cambiar Color de Fondo</button>
-        <button id="textColorButton" aria-label="Cambiar Color del Texto" >Cambiar Color del Texto</button>
-        <button id="buttonColorButton" aria-label="Cambiar Color de los Botones">Cambiar Color de los Botones</button>
-        <input type="color" id="customColorInput" value="#ff0000">
-        <button id="applyCustomColor">Aplicar Color Personalizado</button>
-    </main>
-
-    <script src="./js/script.js"></script>
-</body>
+<!DOCTYPE html> <!-- Indica que el documento está en formato HTML5 -->
+<html lang="es"> <!-- Define que el idioma del contenido es español -->
+    <head>
+        <meta charset="UTF-8"> <!-- Usa la codificación UTF-8 para que los caracteres especiales se muestren bien -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permite que el sitio sea responsive en dispositivos móviles -->
+        <title>Proyecto Extendido</title> <!-- Título que se muestra en la pestaña del navegador -->
+        <link rel="stylesheet" href="./asset/styles.css"> <!-- Enlace a la hoja de estilos CSS -->
+    </head>
+    <body> <!-- Inicio del cuerpo de la página -->
+        <!-- Contenedor principal -->
+        <main class="container">
+            <h1>¡Hola Mundo!</h1> <!-- Título principal de la página -->
+            <p id="text">Este es un párrafo de ejemplo.</p> <!-- Párrafo con ID para cambiarle el color mediante JavaScript -->
+            <!-- lista con 3 elementos -->
+            <ul id="list">
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+            </ul>
+            <!-- Botón para cambiar el color de fondo de la página -->
+            <button id="colorButton" aria-label="Cambiar color de fondo">
+                Cambiar Color de Fondo
+            </button>
+            <!-- Botón para cambiar el color del texto -->
+            <button id="textColorButton" aria-label="Cambiar Color del Texto">
+                Cambiar Color del Texto
+            </button>
+            <!-- Botón para cambiar el color de todos los botones -->
+            <button id="buttonColorButton" aria-label="Cambiar Color de los Botones">
+                Cambiar Color de los Botones
+            </button>
+            <!-- Selector de color personalizado -->
+            <input type="color" id="customColorInput" value="#ff0000">
+            <!-- Botón para aplicar el color personalizado elegido -->
+            <button id="applyCustomColor">Aplicar Color Personalizado</button>
+        </main>
+        <!-- Enlace al archivo JavaScript donde se hacen los cambios de color -->
+        <script src="./js/script.js"></script>
+    </body>
 </html>
