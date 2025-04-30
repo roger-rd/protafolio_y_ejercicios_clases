@@ -1,69 +1,79 @@
+/* Estilos generales del cuerpo (body) de la página */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-    transition: background-color 0.5s ease;
+    font-family: Arial, sans-serif; /* Tipo de letra general */
+    display: flex; /* Usamos Flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    margin: 0; /* Elimina márgenes por defecto del navegador */
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    transition: background-color 0.5s ease; /* Efecto suave cuando cambia el color de fondo */
 }
 
+/* Contenedor principal que envuelve todo el contenido */
 .container {
-    text-align: center;
+    text-align: center; /* Centra el texto dentro del contenedor */
 }
 
+/* Estilo del título principal */
 h1 {
-    color: #333;
-    transition: color 0.5s ease;
+    color: #333; /* Color gris oscuro */
+    transition: color 0.5s ease; /* Transición suave al cambiar el color */
 }
 
+/* Estilo del párrafo de ejemplo */
 p {
-    color: #555;
-    font-size: 18px;
-    transition: color 0.5s ease;
+    color: #555; /* Gris más claro */
+    font-size: 18px; /* Tamaño del texto */
+    transition: color 0.5s ease; /* Transición suave al cambiar color */
 }
 
+/* Estilos para la lista sin viñetas */
 ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Quita los puntitos o numeración */
+    padding: 0; /* Elimina el espacio interior */
 }
 
+/* Estilo para cada elemento de la lista */
 li {
-    background-color: #fff;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.5s ease;
+    background-color: #fff; /* Fondo blanco */
+    margin: 5px; /* Espacio entre elementos */
+    padding: 10px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar relieve */
+    transition: background-color 0.5s ease; /* Efecto suave al cambiar color de fondo */
 }
 
+/* Efecto al pasar el mouse por encima de los elementos de la lista */
 li:hover {
-    transform: scale(1.1);
-    background-color: #0dc030b8;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    background-color: #0dc030b8; /* Cambia a un verde llamativo */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto suave en tamaño y color */
+    cursor: pointer; /* Cambia el cursor a manito */
 }
 
+/* Estilo general para todos los botones */
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
-    transition: background-color 0.3s ease;
+    padding: 10px 20px; /* Espaciado interno (vertical y horizontal) */
+    font-size: 16px; /* Tamaño del texto */
+    color: #fff; /* Color del texto (blanco) */
+    background-color: #007BFF; /* Fondo azul intenso */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo manito al pasar por encima */
+    margin: 5px; /* Espacio alrededor de cada botón */
+    transition: background-color 0.3s ease; /* Efecto suave al cambiar color de fondo */
 }
 
+/* Estilo para los botones cuando el mouse pasa por encima */
 button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Azul más oscuro al hacer hover */
 }
 
+/* Estilo para el input de tipo color */
 input[type="color"] {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    cursor: pointer;
+    padding: 5px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+    cursor: pointer; /* Cursor tipo manito */
 }
