@@ -1,36 +1,43 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!-- Indica que este archivo está escrito en HTML5 -->
+
+<html lang="es"> <!-- Define que el idioma principal de la página es español -->
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pregunta 4</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8"> <!-- Usa codificación UTF-8 para mostrar bien acentos y caracteres especiales -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página se vea bien en celulares -->
+  <title>Pregunta 4</title> <!-- Título que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="styles.css"> <!-- Conecta la hoja de estilos CSS externa -->
 </head>
-<body>
+
+<body> <!-- Comienza el contenido visible de la página -->
+
+  <!-- Contenedor principal -->
   <div class="container">
-    <h1>CRUD Simple</h1>
+    <h1>CRUD Simple</h1> <!-- Título principal de la página -->
 
-    <!-- Formulario -->
+    <!-- Formulario para ingresar un nuevo usuario -->
     <form id="userForm">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" placeholder="Ingresa el nombre">
+      <label for="name">Nombre:</label> <!-- Etiqueta para el campo de nombre -->
+      <input type="text" id="name" placeholder="Ingresa el nombre"> <!-- Campo de texto para el nombre -->
 
-      <label for="run">RUN:</label>
-      <input type="text" id="run" placeholder="Ejemplo: 12345678-9">
+      <label for="run">RUN:</label> <!-- Etiqueta para el campo de RUT -->
+      <input type="text" id="run" placeholder="Ejemplo: 12345678-9"> <!-- Campo de texto para el RUT -->
 
-      <label for="age">Edad:</label>
-      <input type="number" id="age" placeholder="Ingresa la edad">
+      <label for="age">Edad:</label> <!-- Etiqueta para el campo de edad -->
+      <input type="number" id="age" placeholder="Ingresa la edad"> <!-- Campo numérico para la edad -->
 
-      <button type="submit">Guardar</button>
+      <button type="submit">Guardar</button> <!-- Botón para enviar el formulario -->
     </form>
 
-    <!-- Lista de usuarios -->
+    <!-- Sección donde se mostrará la lista de usuarios registrados -->
     <div id="userList">
-      <h3>Lista de Usuarios</h3>
-      <ul id="userTableBody"></ul>
+      <h3>Lista de Usuarios</h3> <!-- Subtítulo para la lista -->
+      <ul id="userTableBody"></ul> <!-- Lista vacía donde se cargarán los usuarios -->
     </div>
   </div>
 
+  <!-- Archivo JavaScript donde se maneja la lógica del formulario -->
   <script src="script.js"></script>
 </body>
+
 </html>
