@@ -1,72 +1,78 @@
-
+/* Estilos generales del body (fondo y centrado de contenido) */
 body {
-    background-color: #e0e1e3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    background-color: #e0e1e3; /* Color de fondo gris claro */
+    display: flex; /* Usa flexbox para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura completa de la ventana del navegador */
+    margin: 0; /* Elimina margen predeterminado del navegador */
+    font-family: Arial, sans-serif; /* Fuente general del sitio */
 }
 
-
+/* Estilos para el contenedor del formulario */
 #form {
-    background-color: white;
-    padding: 30px 40px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+    background-color: white; /* Fondo blanco para el formulario */
+    padding: 30px 40px; /* Espaciado interno (vertical y horizontal) */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 1px solid #ccc; /* Borde gris claro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 500px; /* Ancho máximo para mantenerlo compacto */
 }
 
+/* Estilo del título del formulario */
 h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
+    text-align: center; /* Centra el texto */
+    margin-bottom: 30px; /* Espacio inferior */
+    color: #333; /* Color gris oscuro */
 }
 
+/* Estilo del formulario y distribución vertical */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: flex; /* Flexbox para organizar campos */
+    flex-direction: column; /* Dirección vertical (de arriba hacia abajo) */
+    gap: 20px; /* Espacio entre los elementos del formulario */
 }
 
-
+/* Estilo general de los inputs */
 input {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #bbb;
-    font-size: 14px;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 10px; /* Espaciado interno */
+    border-radius: 6px; /* Bordes redondeados */
+    border: 1px solid #bbb; /* Borde gris claro */
+    font-size: 14px; /* Tamaño de texto */
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
 }
 
+/* Estilo de las etiquetas (labels) */
 label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #444;
+    margin-bottom: 5px; /* Pequeño espacio debajo del label */
+    font-weight: bold; /* Texto en negrita */
+    color: #444; /* Gris medio */
 }
 
+/* Estilo del texto de ayuda debajo del RUT */
 .ayuda {
-    font-size: 12px;
-    color: #888;
-    margin-top: 4px;
-    display: block;
+    font-size: 12px; /* Letra más pequeña */
+    color: #888; /* Gris claro */
+    margin-top: 4px; /* Espacio superior respecto al input */
+    display: block; /* Hace que se muestre debajo (nueva línea) */
 }
 
-
+/* Estilo del botón "Guardar" */
 #btn-guardar {
-    background-color: #0077cc;
-    color: white;
-    padding: 12px;
-    font-size: 15px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #0077cc; /* Azul fuerte */
+    color: white; /* Texto blanco */
+    padding: 12px; /* Espaciado interno */
+    font-size: 15px; /* Tamaño del texto */
+    border: none; /* Sin borde */
+    border-radius: 6px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo "mano" al pasar encima */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar color */
 }
 
+/* Estilo del botón cuando el mouse pasa encima */
 #btn-guardar:hover {
-    background-color: #005fa3;
+    background-color: #005fa3; /* Azul más oscuro al hacer hover */
 }
+
