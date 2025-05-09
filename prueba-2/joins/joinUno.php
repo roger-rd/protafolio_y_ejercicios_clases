@@ -7,22 +7,28 @@ $resultados = $conexion->query("SELECT * FROM empleados
 ?>
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
+
 <head>
-    <meta charset="UTF-8">
-    <title>Join: Empleados y Departamentos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <title>Join: Empleados y Departamentos</title> <!-- Título que aparece en la pestaña del navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Adaptación para dispositivos móviles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Carga de estilos desde Bootstrap CDN -->
 </head>
+
 <body class="bg-light">
     <div class="container py-5">
+
+        <!-- Encabezado principal de la página -->
         <h1 class="bg-primary text-white text-center py-3 rounded">
             🔗 Empleados con Información de sus Departamentos
         </h1>
 
+        <!-- Tabla que muestra datos combinados de empleados y sus departamentos mediante JOIN -->
         <div class="card shadow mt-4">
             <div class="card-body">
                 <table class="table table-hover table-bordered align-middle text-center">
+                   <!-- cabecera de la tabla -->
                     <thead class="table-dark">
                         <tr>
                             <th>Código Departamento</th>
@@ -33,6 +39,7 @@ $resultados = $conexion->query("SELECT * FROM empleados
                             <th>Apellidos</th>
                         </tr>
                     </thead>
+                    <!-- cuerpo de la tabla -->
                     <tbody>
                         <?php while ($resultado = $resultados->fetch_array()): ?>
                             <tr>
@@ -49,9 +56,11 @@ $resultados = $conexion->query("SELECT * FROM empleados
             </div>
         </div>
 
+        <!-- Botón para volver a la página principal del sistema -->
         <div class="text-center mt-4">
             <a href="../index.php" class="btn btn-outline-danger">⬅️ Volver al Inicio</a>
         </div>
+
     </div>
 </body>
 </html>
