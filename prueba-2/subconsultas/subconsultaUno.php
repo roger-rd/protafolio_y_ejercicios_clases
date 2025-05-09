@@ -1,19 +1,19 @@
 <?php
 require_once '../conexion.php';
 
-// Subconsulta 1
+// Ejecuta una subconsulta para obtener empleados cuyos departamentos tienen un presupuesto mayor a 500
 $sub1 = $conexion->query("SELECT nombres, apellidos FROM empleados 
     WHERE codigo_departamento IN (
         SELECT codigo FROM departamento WHERE presupuesto > 500
     )");
 
-// Subconsulta 2
+// Ejecuta una subconsulta para obtener empleados del departamento con el presupuesto más alto
 $sub2 = $conexion->query("SELECT nombres, apellidos FROM empleados 
     WHERE codigo_departamento = (
         SELECT codigo FROM departamento ORDER BY presupuesto DESC LIMIT 1
     )");
 ?>
-
+<!-- Página que muestra los resultados de las subconsultas de empleados -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -25,11 +25,12 @@ $sub2 = $conexion->query("SELECT nombres, apellidos FROM empleados
 <body class="bg-light">
     <div class="container py-5">
 
+        <!-- Encabezado principal -->
         <h1 class="bg-primary text-white text-center py-3 rounded">
             📊 Subconsultas de Empleados
         </h1>
 
-        <!-- Subconsulta 1 -->
+        <!-- Muestra empleados en departamentos con presupuesto mayor a $500 -->
         <div class="card shadow mt-5">
             <div class="card-header bg-info text-white fw-bold">
                 🧾 Empleados en Departamentos con Presupuesto &gt; $500
@@ -54,7 +55,7 @@ $sub2 = $conexion->query("SELECT nombres, apellidos FROM empleados
             </div>
         </div>
 
-        <!-- Subconsulta 2 -->
+        <!-- Muestra empleados del departamento con mayor presupuesto -->
         <div class="card shadow mt-5">
             <div class="card-header bg-success text-white fw-bold">
                 🏆 Empleados en el Departamento con Mayor Presupuesto
@@ -79,9 +80,12 @@ $sub2 = $conexion->query("SELECT nombres, apellidos FROM empleados
             </div>
         </div>
 
+        <!-- Botón para volver al inicio del sistema -->
         <div class="text-center mt-5">
             <a href="../index.php" class="btn btn-outline-danger">⬅️ Volver al Inicio</a>
         </div>
+
     </div>
 </body>
 </html>
+
