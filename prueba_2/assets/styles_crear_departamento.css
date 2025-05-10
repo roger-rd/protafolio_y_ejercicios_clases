@@ -1,24 +1,39 @@
-
+/* Estilo para las etiquetas de los formularios */
 label {
-    display: block; margin: 10px 0 5px;
+    display: block;              /* Hace que cada etiqueta ocupe su propia línea */
+    margin: 10px 0 5px;          /* Espaciado arriba, entre campos */
 }
+
+/* Estilo para los campos de entrada */
 input {
-    padding: 5px; width: 200px; 
+    padding: 5px;                /* Espacio interno */
+    width: 200px;                /* Ancho fijo */
 }
+
+/* Estilo para botones de acción */
 button {
-    padding: 10px 20px; background: #007BFF; color: white; border: none; cursor: pointer; 
+    padding: 10px 20px;          /* Espaciado interno para que sea más grande */
+    background: #007BFF;         /* Azul Bootstrap */
+    color: white;                /* Texto blanco */
+    border: none;                /* Sin borde predeterminado */
+    cursor: pointer;             /* Manito al pasar por encima */
 }
-button:hover { background: #0056b3; }
 
+/* Efecto hover en botón */
+button:hover {
+    background: #0056b3;         /* Azul más oscuro al pasar el mouse */
+}
 
+/* Estilo para mensajes de éxito */
 .mensaje {
-    color: green;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .error {
-    color: red;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
+    color: green;                /* Texto verde */
+    font-weight: bold;          /* Negrita */
+    margin-bottom: 20px;        /* Espacio inferior */
+}
+
+/* Estilo para mensajes de error */
+.error {
+    color: red;                  /* Texto rojo */
+    font-weight: bold;          /* Negrita */
+    margin-bottom: 20px;        /* Espacio inferior */
+}

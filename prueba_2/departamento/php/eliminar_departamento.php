@@ -1,27 +1,30 @@
-
 <?php
-require_once '../../conexion.php';
+require_once '../../conexion.php'; // Conexión a la base de datos
 
-// tomo el parametro enviado
+// Verificamos si llegó el parámetro 'codigo' por GET
 if (isset($_GET['codigo'])) {
-    $codigo = $_GET['codigo'];
-    
-    //preparo la consulta sql
+    $codigo = $_GET['codigo']; // Guardamos el valor del código enviado por la URL
+
+    // Preparamos la consulta SQL para eliminar un departamento específico
     $stmt = $conexion->prepare("DELETE FROM departamento WHERE codigo = ?");
 
-    //le paso el parametro hay uno solo..y es le codigo y de tipo  I
+    // Enlazamos el parámetro (i = integer)
     $stmt->bind_param("i", $codigo);
 
-    if ($stmt->execute())   //si esta todo okay se ejecuta...
-    {
+    // Ejecutamos la consulta
+    if ($stmt->execute()) {
+        // Si se ejecuta correctamente, mostramos mensaje de éxito
         $mensaje = "Departamento eliminado exitosamente.";
     } else {
+        // Si hay un error en la ejecución, lo mostramos
         $mensaje = "Error al eliminar el departamento: " . $conexion->error;
     }
-    $stmt->close();
-    
-    
-    
+
+    $stmt->close(); // Cerramos la consulta preparada
 }
-HEADER("LOCATION:../vistas/crud_departamento.php");
+
+// Redirigir al CRUD con mensaje (opcionalmente puedes usar sesiones o GET para mostrar el mensaje allí)
+header("Location: ../vistas/crud_departamento.php");
+exit;
+
 ?>

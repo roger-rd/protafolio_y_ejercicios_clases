@@ -1,40 +1,47 @@
 <?php
+// Mostrar todos los errores (solo para desarrollo)
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-require_once '../../conexion.php';
+require_once '../../conexion.php'; // Conexión a la base de datos
 
-$mensaje = '';
+$mensaje = ''; // Variable para mostrar mensajes de error
 
+// Si el formulario se envió por método POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $codigo = trim($_POST['codigo']); // Este no cambia, es el que ya existe
+    // Capturar y limpiar datos del formulario
+    $codigo = trim($_POST['codigo']); // Código único del departamento (no editable)
     $nombre = trim($_POST['nombre']);
     $presupuesto = trim($_POST['presupuesto']);
 
-    // Validaciones
+    // Validaciones de los datos
     if (empty($codigo) || empty($nombre) || empty($presupuesto)) {
         $mensaje = "Todos los campos son obligatorios.";
     } elseif (!is_numeric($presupuesto) || $presupuesto < 0) {
         $mensaje = "El presupuesto debe ser un número positivo.";
     } else {
-        // Actualizar el departamento
+        // Preparar la consulta para actualizar el departamento
         $stmt = $conexion->prepare("UPDATE departamento SET nombre = ?, presupuesto = ? WHERE codigo = ?");
+        
+        // Enlazar parámetros a la consulta (sds: string, double, string)
         $stmt->bind_param("sds", $nombre, $presupuesto, $codigo);
 
+        // Ejecutar la consulta
         if ($stmt->execute()) {
-            // Redirigir si todo salió bien
+            // Si todo salió bien, redirigir al CRUD
             header("Location: ../vistas/crud_departamento.php");
             exit;
         } else {
+            // Si hubo error al ejecutar
             $mensaje = "Error al actualizar el departamento: " . $conexion->error;
         }
 
-        $stmt->close();
+        $stmt->close(); // Cerrar la consulta preparada
     }
 }
 ?>
 
-<!-- Si ocurre un error, mostramos mensaje -->
+<!-- HTML para mostrar el mensaje de error en pantalla -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -45,9 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body class="container mt-5">
     <div class="alert alert-danger">
         <h4 class="alert-heading">¡Error!</h4>
-        <p><?php echo htmlspecialchars($mensaje); ?></p>
+        <p><?php echo htmlspecialchars($mensaje); ?></p> <!-- Mostrar mensaje generado -->
         <hr>
-        <a href="../vistas/crud_departamento.php" class="btn btn-secondary">Volver al CRUD</a>
+        <a href="../vistas/crud_departamento.php" class="btn btn-secondary">⬅️ Volver al CRUD</a>
     </div>
 </body>
 </html>

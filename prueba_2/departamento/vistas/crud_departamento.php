@@ -1,5 +1,7 @@
 <?php
-require_once '../../conexion.php';
+require_once '../../conexion.php'; // Conexión a la base de datos
+
+// Consulta para obtener todos los departamentos desde la tabla
 $resultado = $conexion->query("SELECT codigo, nombre, presupuesto FROM departamento");
 ?>
 
@@ -9,7 +11,11 @@ $resultado = $conexion->query("SELECT codigo, nombre, presupuesto FROM departame
     <meta charset="UTF-8">
     <title>CRUD Departamentos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Estilos de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos personalizados para tabla -->
     <style>
         .table thead th {
             background-color: #0d6efd;
@@ -23,8 +29,11 @@ $resultado = $conexion->query("SELECT codigo, nombre, presupuesto FROM departame
 </head>
 <body class="bg-light">
     <div class="container py-5">
+
+        <!-- Título principal -->
         <h1 class="bg-primary text-white text-center py-3 rounded">📋 CRUD de Departamentos</h1>
 
+        <!-- Botones de navegación: crear, filtro, volver -->
         <div class="d-flex justify-content-start gap-3 mt-4 mb-3">
             <a href="./crear_departamento.php" class="btn btn-success">
                 ➕ Agregar Departamento
@@ -37,6 +46,7 @@ $resultado = $conexion->query("SELECT codigo, nombre, presupuesto FROM departame
             </a>
         </div>
 
+        <!-- Tabla de resultados -->
         <div class="card shadow">
             <div class="card-body">
                 <table class="table table-hover table-bordered align-middle text-center">
@@ -49,15 +59,19 @@ $resultado = $conexion->query("SELECT codigo, nombre, presupuesto FROM departame
                         </tr>
                     </thead>
                     <tbody>
+                        <!-- Recorrer todos los departamentos obtenidos -->
                         <?php while ($departamento = $resultado->fetch_assoc()): ?>
                             <tr>
                                 <td><?php echo htmlspecialchars($departamento['codigo']); ?></td>
                                 <td><?php echo htmlspecialchars($departamento['nombre']); ?></td>
                                 <td>$<?php echo number_format($departamento['presupuesto'], 2, ',', '.'); ?></td>
                                 <td class="acciones">
+                                    <!-- Botón para editar -->
                                     <a href="editar_departamento.php?codigo=<?php echo urlencode($departamento['codigo']); ?>" class="btn btn-warning btn-sm">
                                         ✏️ Editar
                                     </a>
+
+                                    <!-- Botón para eliminar con confirmación -->
                                     <a href="../php/eliminar_departamento.php?codigo=<?php echo urlencode($departamento['codigo']); ?>" class="btn btn-danger btn-sm"
                                        onclick="return confirm('¿Estás seguro de eliminar este departamento?')">
                                        🗑️ Eliminar
